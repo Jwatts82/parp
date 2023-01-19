@@ -1,0 +1,2 @@
+class ReadDate < ApplicationRecord
+end
