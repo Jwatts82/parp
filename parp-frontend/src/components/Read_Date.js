@@ -18,10 +18,11 @@ class Read_Date {
 
     renderReadDate() {
         return `
-        <h3>${this.month}.${this.day}.${this.year}</h3>
+        <h3>${this.month} ${this.day}, ${this.year}</h3>
+        <h4>${this.completed ? "Completed" : "Not Completed"}</h4>
         <hr>
         <br>
-        <p>${this.completed ? "Completed" : "Not Completed"}</p>
+        <p></p>
         <button id='delete-todo' data-id='${this.id}'>Delete</button>
         
         `
