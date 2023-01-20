@@ -3,6 +3,8 @@ let main = document.getElementById('main')
 
 const init = () => {
     renderReadDates()
+    document.getElementById('read_date').addEventListener('click', renderReadDates)
+
     
 }
 
@@ -24,14 +26,25 @@ function attachClicksToLinks() {
 }
 
 async function displayReadDate(e) {
-    // console.log(e.target)
     let id = e.target.dataset.id
 
     const data = await apiService.fetchReadDate(id)
     const read_date = new Read_Date(data)
     main.innerHTML = read_date.renderReadDate()
 
+    if (read_date.books) {
+        read_date.books.forEach(book => {
+            console.log(book)
+            main.innerHTML += `
+            <li><a href='#' data-id='${this.id}'>${book.title} , ${book.author} - ${read_time}</a></li>
+            `
+        })
+    }
+
 }
+
+
+
 
 
 

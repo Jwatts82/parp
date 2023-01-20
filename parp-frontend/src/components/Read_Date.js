@@ -22,7 +22,10 @@ class Read_Date {
         <h4>${this.completed ? "Completed" : "Not Completed"}</h4>
         <hr>
         <br>
-        <p></p>
+        <div>
+        
+        </div>
+        <br>
         <button id='delete-todo' data-id='${this.id}'>Delete</button>
         
         `

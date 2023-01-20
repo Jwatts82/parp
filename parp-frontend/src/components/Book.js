@@ -6,7 +6,7 @@ class Book {
         this.read_time = data.read_time
     }
 
-    renderBook() {
+    renderBooks() {
         return `
         <li>
             <a href='#' data-id='${this.id}'>${this.title}, ${this.author}</a>

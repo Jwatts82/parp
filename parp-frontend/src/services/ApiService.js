@@ -14,5 +14,11 @@ class ApiService {
         let data = await res.json()
         return data
     }
+
+    async fetchBooks() {
+        let res = await fetch(this.baseURL + '/books')
+        let data = await res.json()
+        return data
+    }
     
 }
